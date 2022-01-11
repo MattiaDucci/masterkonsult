@@ -14,8 +14,8 @@
       link: /chi-siamo/
     - name: Contatti
       link: /contatti/  
-    - name: Privacy
-      link: /privacy-policy/
+    # - name: Privacy
+    #   link: /privacy-policy/
 
 # - title: Social
 #   links:
