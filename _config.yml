@@ -1,66 +1,40 @@
-title: Urban Template
+title: Master Konsult
 url: "https://teal-worm.cloudvent.net"
-baseurl:
+baseurl: 
 google_analytics_key:
 google_maps_javascript_api_key:
 disqus_shortname:
 
 # Default description in social shares for the jekyll-seo-tag gem
-description: Jekyll template with example content for a web agency.
+description: "TODO: meta descrizione generale di MasterKonsult"
 
-# Author details for the jekyll-seo-tag gem
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-
-# Social details for the jekyll-seo-tag gem
-social:
-  name: Urban Template
-  links:
-    - https://github.com/CloudCannon/urban-jekyll-template
-
-timezone: Etc/UTC
+timezone: Europe/Rome
 
 collections:
   staff_members:
     output: false
-  clients:
+  servizi:
     output: true
+  customers:
+    output: false
 
-paginate: 10
-paginate_path: "/blog/:num/"
 permalink: pretty
-
-jekyll-archives:
-  enabled:
-    - "categories"
 
 plugins:
   - "jekyll-feed"
   - "jekyll-seo-tag"
-  - "jekyll-paginate"
-  - "jekyll-archives"
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - LICENCE
+  - Dockerfile
+  - "docker-compose.yml"
 
 defaults:
   - scope:
       path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      _options:
-        content:
-          width: 960
-          height: 2000
-  - scope:
-      path: ""
-      type: "clients"
+      type: "servizi"
     values:
       layout: "client"
       _options:
@@ -85,17 +59,3 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-
-# -----------
-# CloudCannon
-
-_select_data:
-  social_icons:
-    - Facebook
-    - Instagram
-    - LinkedIn
-    - Pinterest
-    - Tumblr
-    - Twitter
-    - YouTube
-    - RSS

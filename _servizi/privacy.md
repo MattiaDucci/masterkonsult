@@ -1,14 +1,15 @@
 ---
-name: Frisco Template
-subtitle: App marketing template for Jekyll
-external_url: https://github.com/CloudCannon/frisco-jekyll-template
-image_path: /images/clients/frisco.jpg
+name: Hydra Template
+subtitle: Product marketing template for Jekyll
+external_url: https://github.com/CloudCannon/hydra-jekyll-template
+link: privacy
+image_path: /images/clients/hydra.png
 ---
 
-App promotion themed template for Jekyll. Browse through a [live demo](https://brave-submarine.cloudvent.net/).
-Increase the web presence of a App with this configurable theme.
+Marketing site template for Jekyll. Browse through a [live demo](https://proud-alligator.cloudvent.net/).
+Increase the web presence of your brand with this configurable theme.
 
-Frisco was made by [CloudCannon](https://cloudcannon.com/), the Cloud CMS for Jekyll.
+Hydra was made by [CloudCannon](https://cloudcannon.com/), the Cloud CMS for Jekyll.
 
 Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
 
@@ -35,7 +36,7 @@ Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Ac
 
 ## Develop
 
-Frisco was built with [Jekyll](https://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
+Hydra was built with [Jekyll](https://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
 
 Install the dependencies with [Bundler](https://bundler.io/):
 
@@ -51,24 +52,26 @@ $ bundle exec jekyll serve
 
 ## Editing
 
-Frisco is already optimised for adding, updating and removing pages, staff, advice, company details and footer elements in CloudCannon.
+Hydra is already optimised for adding, updating and removing pages, staff, advice, company details and footer elements in CloudCannon.
 
 ### Posts
 
 * Add, update or remove a post in the *Posts* collection.
-* The **Staff Author** field links to members in the **Staff Members** collection.
+* The **Staff Author** field links to members in the **Staff** collection.
 * Documentation pages are organised in the navigation by category, with URLs based on the path inside the `_docs` folder.
 * Change the defaults when new posts are created in `_posts/_defaults.md`.
 
 ### Contact Form
 
 * Preconfigured to work with CloudCannon, but easily changed to another provider (e.g. [FormSpree](https://formspree.io/)).
+* Sends email to the address listed in company details.
 
 ### Staff
 
 * Reused around the site to save multiple editing locations.
+* Add `excluded_in_search: true` to any documentation page's front matter to exclude that page in the search results.
 
-### Footer
+### Navigation
 
 * Exposed as a data file to give clients better access.
 * Set in the *Data* / *Navigation* section.

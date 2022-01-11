@@ -1,0 +1,20 @@
+<section id="testimonials" class="diagonal alternate">
+    <div class="container halves">
+        <div class="title-logos-container">
+            <h2 style="text-align:center; margin-bottom: 32px;">I nostri clienti</h2>
+            <div class="testimonials-container">
+                {% for customer in site.customers %}
+                    <a href="{{ customer.link }}">
+                        <img 
+            src="{{ site.baseurl }}/images/{{ customer.logo}}" 
+            alt="" 
+            width="200" 
+            style="margin-bottom: 40px; margin-right: 20px; margin-left: 20px;">
+                    </a>
+
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</section>

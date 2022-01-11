@@ -1,0 +1,11 @@
+version: '2.4'
+
+services:
+  jekyll:
+    build: .
+    volumes:
+      - .:/srv/jekyll
+    ports:
+      - '8083:4000'
+      - '4004:4001'
+    command: bundle exec jekyll s --force-polling -H 0.0.0.0 -P 4000 --livereload --livereload-port 4001

@@ -1,11 +1,11 @@
 ---
-title: Contact
+title: Contatti
 heading: Get in touch today
 subtitle: We'd love to help your business.
 map:
-  latitude: -45.8787605
-  longitude: 170.5027976
-  address: "1 George Street, Dunedin, New Zealand"
+  latitude: 45.530660027724544
+  longitude: 10.228541033800019
+  address: "Via Armando Diaz, 18, Brescia, Italia"
   zoom: 13
 ---
 
@@ -17,20 +17,20 @@ map:
 
 			<div class="halves">
 				<div>
-					<label for="name">First Name</label>
+					<label for="name">Nome</label>
 					<input type="text" name="first-name" id="first-name" placeholder="John" />
 				</div>
 
 				<div>
-					<label for="name">Last Name</label>
+					<label for="name">Cognome</label>
 					<input type="text" name="last-name" id="last-name" placeholder="Doe" />
 				</div>
 			</div>
 
-			<label for="email">Email Address</label>
+			<label for="email">Email</label>
 			<input type="email" name="email" id="email" placeholder="john@example.com" required />
 
-			<label for="message">Message</label>
+			<label for="message">Messaggio</label>
 			<textarea name="message" id="message" placeholder="Hi There..."></textarea>
 
 			<input type="submit" value="Send Message" />
@@ -45,7 +45,7 @@ map:
 <section class="diagonal">
 	<div class="container halves aligned-top">
 		<div>
-			<h3>Address</h3>
+			<h3>Indirizzo</h3>
 				<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
 		</div>
 		<div>

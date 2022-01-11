@@ -13,6 +13,28 @@
 	max-width: 1000px;
 }
 
+@media #{$tablet} {
+	.text-align-sm-center{
+		text-align: center;
+	}
+}
+
+@media #{$mid-point} {
+	.text-align-sm-center{
+		text-align: inherit;
+	}
+}
+
+.image-container-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
 header {
 	color: #fff;
 	padding: 20px 0;
@@ -59,6 +81,20 @@ section {
 	background: #fff;
 	margin-top: -2px;
 
+	&#testimonials{
+
+		.title-logos-container{
+			display: flex;
+			flex-direction: column;
+		}
+
+		.testimonials-container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
 	&.diagonal {
 		-webkit-transform: skewY(-$section-rotation);
 		-moz-transform: skewY(-$section-rotation);
@@ -102,6 +138,33 @@ section {
 	&.alternate {
 		background: #eee;
 	}
+
+	@media #{$tablet} {
+		.order-normal{
+			display: flex;
+			flex-direction: column;
+		}
+	
+		.order-inverse{
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	@media #{$mid-point} {
+		.order-normal{
+			display: flex;
+			flex-direction: row;
+		}
+	
+		.order-inverse{
+			display: flex;
+			flex-direction: row-reverse;
+		}	
+	}
+
+	
+	
 }
 
 .button {
