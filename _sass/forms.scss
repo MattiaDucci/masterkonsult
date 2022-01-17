@@ -12,6 +12,7 @@ input[type=submit] {
 input[type=submit]:hover {
 	border: 1px solid $brand-color;
 	background: $secondary-brand-color;
+	color: $brand-color;
 }
 
 input[type=submit]:active {
