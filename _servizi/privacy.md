@@ -1,8 +1,9 @@
 ---
-name: Privacy e GDPR
-subtitle: Product marketing template for Jekyll
+name: Privacy
+subtitle: "Verifichiamo la compliance con il Regolamento UE GDPR della tua organizzazione, e siamo inoltre a tua disposizione per svolgere l’attività di Data Protection Officer"
 link: privacy
-image_path: /images/clients/hydra.png
+image_path: privacy.png
+order: 2
 ---
 
 ## Scrivere qualcosa in Markdown

@@ -1,8 +1,9 @@
 ---
 name: PNRR
-subtitle: Law firm themed business template for Jekyll
+subtitle: "Assistiamo imprese e pubblica amministrazione per la partecipazione ai bandi pubblici, siamo in grado di supportare per la definizione di progettualità compatibili con il PNRR, nonché per la loro excution."
 link: pnrr
-image_path: /images/clients/justice.jpg
+image_path: pnrr.png
+order: 3
 ---
 
 ## Scrivere qualcosa in Markdown

@@ -1,8 +1,9 @@
 ---
-name: Consulenza, affiancamento e formazione tecnico finanziaria
-subtitle: Vi assicuriamo un supporto continuo
+name: Consulenza tecnico finanziaria
+subtitle: "Ti supportiamo per problematiche tecnico-amministrativa nell’ambito della gestione dei rapporti Clienti, Fornitori ed Enti Pubblici."
 link: consulenza
-image_path: /images/clients/edition.png
+image_path: consulenza.svg
+order: 0
 ---
 
 ## Consulenza tecnico amministrativa

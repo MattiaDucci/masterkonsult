@@ -4,8 +4,8 @@ title: Home
 
 <section class="hero diagonal">
 	<div class="container">
-		<h2 class="editable">We build websites</h2>
-		<p class="subtext editable">This is the <strong>Urban</strong> template from <a href="https://cloudcannon.com/">CloudCannon</a>. Urban is a strong foundation for the web presence of your agency.</p>
+		<h2 class="editable">{{ site.hero-msg }}</h2>
+		<p class="subtext editable">{{ site.description }}</p>
 		<p><a class="button alt" href="{{ site.baseurl }}/contatti/">Contattaci</a></p>
 	</div>
 </section>
@@ -29,8 +29,12 @@ title: Home
 	%}
 {% endfor %}
 
+{% comment %}
 <!-- TESTIMONIALS -->
 {% include testimonials.html %}
+{% endcomment %}
+
+
 
 
 
