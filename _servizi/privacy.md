@@ -1,5 +1,6 @@
 ---
-name: Privacy
+identifier: privacy
+title: Privacy
 subtitle: "Verifichiamo la compliance con il Regolamento UE GDPR della tua organizzazione, e siamo inoltre a tua disposizione per svolgere l’attività di Data Protection Officer"
 link: privacy
 image_path: privacy.png

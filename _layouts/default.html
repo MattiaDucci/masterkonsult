@@ -92,5 +92,10 @@
 				return false;
 			};
 		</script>
+		{% include common_scripts.html %}
+		{% assign page_name = page.path | without_extension %}
+		{% include page_script.html page=page_name %}
+		
+		
 	</body>
 </html>

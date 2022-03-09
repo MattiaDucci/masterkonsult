@@ -15,13 +15,12 @@ collections:
   staff_members:
     output: false
   servizi:
-    output: true
+    output: false
     sort_by: order
   customers:
     output: false
   chi_siamo:
     output: false
-    sort_by: order
 
 permalink: pretty
 
