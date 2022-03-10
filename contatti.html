@@ -38,8 +38,9 @@ map:
 			<div id="checkboxes">
 				{% for service in site.servizi %}
 					<div style="display: flex; align-items:center;">
-						<input type="checkbox" name="Checkbox_service" id="checkbox_{{ service.identifier }}" value="{{ service.title }}">
-						<label class="checkbox_label" for="checkbox_{{ service.identifier }}">{{ service.title }}</label>
+					<label>
+						<input type="checkbox" name="aree di interesse" id="checkbox_{{ service.identifier }}" value="{{ service.title }}"> {{ service.title }}
+					</label>
 					</div>
 				{% endfor %}
 			</div>
