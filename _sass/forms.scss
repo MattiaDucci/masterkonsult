@@ -45,6 +45,12 @@ textarea {
 	box-sizing: border-box;
 }
 
+#checkboxes{
+	label{
+		margin: unset;
+	}
+}
+
 textarea {
 	resize: vertical;
 	height: 250px;
