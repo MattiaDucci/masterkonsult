@@ -12,10 +12,17 @@ input[type=submit] {
 input[type=submit]:hover {
 	border: 1px solid $brand-color;
 	background: $secondary-brand-color;
+	color: $brand-color;
 }
 
 input[type=submit]:active {
 	transform: translateY(1px);
+}
+
+input[type=checkbox]{
+	width:auto;
+	display: inline;
+	margin-left: 0;
 }
 
 textarea,
@@ -38,6 +45,12 @@ textarea {
 	box-sizing: border-box;
 }
 
+#checkboxes{
+	label{
+		margin: unset;
+	}
+}
+
 textarea {
 	resize: vertical;
 	height: 250px;
@@ -46,6 +59,11 @@ textarea {
 label {
 	margin: 30px 0 10px 0;
 	font-size: 1.2em;
+
+	&.checkbox_label{
+		display: inline;
+		margin: 0;
+	}
 }
 
 input,

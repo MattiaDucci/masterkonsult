@@ -1,9 +1,10 @@
 ---
-name: Innovazione
-subtitle: Event marketing template for Jekyll
-external_url: https://github.com/CloudCannon/malt-jekyll-template
+identifier: innovazione
+title: Innovazione d'impresa
+subtitle: "Ti aiutiamo a predisporre il Piano per la trasformazione digitale, e ti supportiamo per la sua attuazione per diventare Impresa Digitale"
 link: innovazione
-image_path: /images/clients/malt.jpg
+image_path: innovazione.svg
+order: 1
 ---
 
 ## Scrivere qualcosa in Markdown

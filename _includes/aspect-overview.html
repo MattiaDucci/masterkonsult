@@ -1,0 +1,16 @@
+<section class="diagonal {{ include.section_main_class }}">
+    <div class="container halves {{ include.order_class }}">
+        <div>
+            <h3 class="editable text-align-sm-center">{{ include.title }}</h3>
+            <p class="editable text-align-sm-center">{{ include.excerpt }}</p>
+            {% if include.is_link_visible %}
+                <p class="editable text-align-sm-center">
+                    <a href="{{ site.baseurl }}/servizi/{{ include.link }}">Chiedi ulteriori informazioni &rarr;</a>
+                </p>    
+            {% endif %}
+        </div>
+        <div class="image-container-center">
+            <img src="{{ site.baseurl }}/images/{{ include.image_dir }}/{{ include.image }}" width="400" style="margin-bottom: 40px;">
+        </div>
+    </div>
+</section>

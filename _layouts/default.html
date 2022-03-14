@@ -29,7 +29,7 @@
 	<body>
 		<header>
 			<div class="container">
-				<h1 class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="Urban" width="150"></a></h1>
+				<h1 class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="MasterKonsult logo" width="150"></a></h1>
 				{% include navigation.html %}
 			</div>
 		</header>
@@ -92,5 +92,10 @@
 				return false;
 			};
 		</script>
+		{% include common_scripts.html %}
+		{% assign page_name = page.path | without_extension %}
+		{% include page_script.html page=page_name %}
+		
+		
 	</body>
 </html>

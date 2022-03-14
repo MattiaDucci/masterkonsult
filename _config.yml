@@ -6,7 +6,8 @@ google_maps_javascript_api_key:
 disqus_shortname:
 
 # Default description in social shares for the jekyll-seo-tag gem
-description: "TODO: meta descrizione generale di MasterKonsult"
+hero-msg: Diventa impresa digitale
+description: "Un team innovativo dedicato alle imprese ed alla pubblica amministrazione, esperti di nuove tecnologie, sicurezza informatica, e di semplificazione aziendale, che collaborano fianco a finaco per offrire una risposta completa a tutte le esigenze dell'impresa digitale."
 
 timezone: Europe/Rome
 
@@ -14,8 +15,11 @@ collections:
   staff_members:
     output: false
   servizi:
-    output: true
+    output: false
+    sort_by: order
   customers:
+    output: false
+  chi_siamo:
     output: false
 
 permalink: pretty
@@ -30,6 +34,9 @@ exclude:
   - README.md
   - Dockerfile
   - "docker-compose.yml"
+
+include:
+  - _redirects
 
 defaults:
   - scope:

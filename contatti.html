@@ -1,7 +1,7 @@
 ---
 title: Contatti
-heading: Get in touch today
-subtitle: We'd love to help your business.
+heading: Conosciamoci meglio, scrivici!
+subtitle: Hai dubbi riguardo a cosa facciamo o pensi che potremmo essere utili alla tua attività? Saremo lieti di darti un pronto riscontro!
 map:
   latitude: 45.530660027724544
   longitude: 10.228541033800019
@@ -11,25 +11,40 @@ map:
 
 <section class="diagonal">
 	<div class="container">
-		<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-			<input type="hidden" name="_to" value="support@example.com" />
-			<input type="text" name="_gotcha" style="display: none;" />
+		<form name="contatti" action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form" data-netlify="true">
 
 			<div class="halves">
 				<div>
-					<label for="name">Nome</label>
-					<input type="text" name="first-name" id="first-name" placeholder="Mario" />
+					<label for="contact">Contatto*</label>
+					<input type="text" name="contatto" id="contact" placeholder="Mario Rossi, CEO dell'azienda..." required />
 				</div>
-
 				<div>
-					<label for="name">Cognome</label>
-					<input type="text" name="last-name" id="last-name" placeholder="Rossi" />
+					<label for="factory-name">Nome dell'azienda*</label>
+					<input type="text" name="nome-azienda" id="factory-name" placeholder="Apple Inc." required />
 				</div>
 			</div>
-
-			<label for="email">Email</label>
-			<input type="email" name="email" id="email" placeholder="mariorossi@gmail.com" required />
-
+			<div class="halves">
+				<div>
+					<label for="email">Email*</label>
+					<input type="text" name="email" id="email" placeholder="mariorossi@gmail.com" required pattern="^.+@.+[.].+" title="La mail deve contenere almeno una @ e un ." />
+				</div>
+				<div>
+					<label for="phone-number">Numero di telefono*</label>
+					<input type="text" name="telefono" id="phone-number" placeholder="+393457634672" required pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" title="I formati ammessi hanno sia il prefisso nazionale es +39, sia un numero fisso o di cellulare" />
+				</div>	
+			</div>
+			
+			<label for="checkboxes">A che servizi sei interessato?</label>
+			<div id="checkboxes">
+				{% for service in site.servizi %}
+					<div style="display: flex; align-items:center;">
+					<label>
+						<input type="checkbox" name="aree di interesse[]" id="checkbox_{{ service.identifier }}" value="{{ service.title }}"> {{ service.title }}
+					</label>
+					</div>
+				{% endfor %}
+			</div>
+			
 			<label for="message">Messaggio</label>
 			<textarea name="message" id="message" placeholder="Buongiorno, ...."></textarea>
 

@@ -1,19 +1,22 @@
 ---
 title: About
-heading: Our team
-subtitle: Meet our efficient and qualified team.
+heading: Chi siamo
+subtitle: "Siamo un team di consulenza, formazione e servizi per le Imprese. Offriamo supporto specialistico e formazione avanzata per consulenti e Uffici interni IT, Legali, assistenza nelle procedure di certificazione e nella definizione dei processi aziendali."
 ---
 
-<section class="diagonal patterned">
-	<div class="container">
-	TODO: Scrivere qualcosa
-	{%- comment -%}
-	<p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong>Manage Staff members</a></p>
-		<ul class="image-grid">
-			{% for member in site.staff_members %}
-				<li>{% include staff-member.html member=member %}</li>
-			{% endfor %}
-	</ul>
-	{%- endcomment -%}
-	</div>
-</section>
+{% for aspect in site.chi_siamo %}
+	{%- capture section_layout_class -%}
+		{% cycle 'alternate', 'patterned' %}
+	{%- endcapture -%}
+	{%- capture section_order -%}
+		{% cycle 'order-normal', 'order-inverse' %}
+	{%- endcapture -%}
+	{% include aspect-overview.html 
+		section_main_class=section_layout_class 
+		order_class=section_order
+		title=aspect.title
+		excerpt=aspect.subtitle
+		image=aspect.image_path
+		image_dir="chi-siamo"
+	%}
+{% endfor %}

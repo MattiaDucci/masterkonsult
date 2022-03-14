@@ -1,11 +1,22 @@
 ---
-name: Consulenza
-subtitle: Vi assicuriamo un supporto continuo
-external_url: https://github.com/CloudCannon/edition-jekyll-template
+identifier: consulenza
+title: Consulenza tecnico finanziaria
+subtitle: "Ti supportiamo per problematiche tecnico-amministrativa nell’ambito della gestione dei rapporti Clienti, Fornitori ed Enti Pubblici."
 link: consulenza
-image_path: /images/clients/edition.png
+image_path: consulenza.svg
+order: 0
 ---
 
-## Scrivere qualcosa in Markdown
+## Consulenza tecnico amministrativa
 
-La nostra linea di **consulenza** è una delle migliori al mondo
+_Individuiamo_ i **processi critici** della tua azienda, ne _valutiamo l’impatto_ e ti predisponiamo il piano di business continuità e/o quello di disaster recovery 
+
+## Consulenza di parte
+
+_Affianchiamo_ la **tua azienda** se coinvolta in cause civili su nomina.
+
+La nostra esperienza ci consente di supportare i CTU nominati dal Giudice durante le attività dei processi civili.
+
+## Formazione
+
+_Eroghiamo_ **formazione continua** nell’ambito del Regolamento GDPR e della Trasformazione digitale.

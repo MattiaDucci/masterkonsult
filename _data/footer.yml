@@ -2,14 +2,14 @@
   links:
     - name: Home
       link: /
-    - name: Innovazione d'impresa
-      link: /servizi/innovazione
-    - name: Consulenza
-      link: /servizi/consulenza
-    - name: Privacy
-      link: /servizi/privacy
-    - name: PNRR
-      link: /servizi/pnrr
+    # - name: Innovazione d'impresa
+    #   link: /servizi/innovazione
+    # - name: Consulenza
+    #   link: /servizi/consulenza
+    # - name: Privacy
+    #   link: /servizi/privacy
+    # - name: PNRR
+    #   link: /servizi/pnrr
     - name: Chi siamo
       link: /chi-siamo/
     - name: Contatti
