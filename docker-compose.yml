@@ -8,4 +8,6 @@ services:
     ports:
       - '8083:4000'
       - '4004:4001'
+    environment:
+      - MAPS_API_KEY=AIzaSyDLYEScGvDn2SM1PIodAYAZratibDfLcBI
     command: bundle exec jekyll s --force-polling -H 0.0.0.0 -P 4000 --livereload --livereload-port 4001
