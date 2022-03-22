@@ -1,9 +1,7 @@
 title: Master Konsult
-url: "https://teal-worm.cloudvent.net"
+url: "https://www.masterkonsult.com/"
 baseurl: 
-google_analytics_key:
-google_maps_javascript_api_key: 
-disqus_shortname:
+locale: it_IT
 
 # Default description in social shares for the jekyll-seo-tag gem
 hero-msg: Diventa impresa digitale
@@ -23,10 +21,6 @@ collections:
     output: false
 
 permalink: pretty
-
-plugins:
-  - "jekyll-feed"
-  - "jekyll-seo-tag"
 
 exclude:
   - Gemfile

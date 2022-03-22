@@ -4,6 +4,7 @@ title: Consulenza tecnico finanziaria
 subtitle: "Ti supportiamo per problematiche tecnico-amministrativa nell’ambito della gestione dei rapporti Clienti, Fornitori ed Enti Pubblici."
 link: consulenza
 image_path: consulenza.svg
+image_alt: "Due persone in piedi con alle spalle un grafico a torta. Una persona legge un documento e l'altra ne spiega a voce i dettagli"
 order: 1
 ---
 
