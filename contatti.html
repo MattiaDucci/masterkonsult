@@ -1,22 +1,23 @@
 ---
 title: Contatti
-heading: Conosciamoci meglio, scrivici!
-subtitle: Hai dubbi riguardo a cosa facciamo o pensi che potremmo essere utili alla tua attività? Saremo lieti di darti un pronto riscontro!
+heading: "Conosciamoci meglio, scrivici!"
+subtitle: "Hai dubbi riguardo a cosa facciamo o pensi che potremmo essere utili alla tua attività? Saremo lieti di darti un pronto riscontro!"
 map:
-  latitude: 45.530660027724544
-  longitude: 10.228541033800019
-  address: "Via Armando Diaz 18, Brescia, Italia"
-  zoom: 13
+ latitude: 45.530660027724544
+ longitude: 10.228541033800019
+ address: "Via Armando Diaz 18, Brescia, Italia"
 ---
 
 <section class="diagonal">
 	<div class="container">
-		<form name="contatti" action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form" data-netlify="true">
+		<form name="contatti" action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form"
+			data-netlify="true">
 
 			<div class="halves">
 				<div>
 					<label for="contact">Contatto*</label>
-					<input type="text" name="contatto" id="contact" placeholder="Mario Rossi, CEO dell'azienda..." required />
+					<input type="text" name="contatto" id="contact" placeholder="Mario Rossi, CEO dell'azienda..."
+						required />
 				</div>
 				<div>
 					<label for="factory-name">Nome dell'azienda*</label>
@@ -26,25 +27,29 @@ map:
 			<div class="halves">
 				<div>
 					<label for="email">Email*</label>
-					<input type="text" name="email" id="email" placeholder="mariorossi@gmail.com" required pattern="^.+@.+[.].+" title="La mail deve contenere almeno una @ e un ." />
+					<input type="text" name="email" id="email" placeholder="mariorossi@gmail.com" required
+						pattern="^.+@.+[.].+" title="La mail deve contenere almeno una @ e un ." />
 				</div>
 				<div>
 					<label for="phone-number">Numero di telefono*</label>
-					<input type="text" name="telefono" id="phone-number" placeholder="+393457634672" required pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" title="I formati ammessi hanno sia il prefisso nazionale es +39, sia un numero fisso o di cellulare" />
-				</div>	
+					<input type="text" name="telefono" id="phone-number" placeholder="+393457634672" required
+						pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"
+						title="I formati ammessi hanno sia il prefisso nazionale es +39, sia un numero fisso o di cellulare" />
+				</div>
 			</div>
-			
+
 			<label for="checkboxes">A che servizi sei interessato?</label>
 			<div id="checkboxes">
 				{% for service in site.servizi %}
-					<div style="display: flex; align-items:center;">
+				<div style="display: flex; align-items:center;">
 					<label>
-						<input type="checkbox" name="aree di interesse[]" id="checkbox_{{ service.identifier }}" value="{{ service.title }}"> {{ service.title }}
+						<input type="checkbox" name="aree di interesse[]" id="checkbox_{{ service.identifier }}"
+							value="{{ service.title }}"> {{ service.title }}
 					</label>
-					</div>
+				</div>
 				{% endfor %}
 			</div>
-			
+
 			<label for="message">Messaggio</label>
 			<textarea name="message" id="message" placeholder="Buongiorno, ...."></textarea>
 
@@ -53,48 +58,45 @@ map:
 	</div>
 </section>
 
-<section class="diagonal map">
-	<div id="gmap_canvas"></div>
-</section>
+<div class="mapouter">
+	<div class="gmap_canvas">
+		<iframe width="100%" height="500" id="gmap_canvas"
+			src="https://maps.google.com/maps?q=Via%20armando%20Diaz%2018,%20brescia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+			frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+		</iframe>
+	</div>
+		<style>
+			.mapouter {
+				position: relative;
+				text-align: right;
+				height: 500px;
+				width: 100%;
+				transform: skewY(-5deg);
+			}
+		</style><a href="https://www.embedgooglemap.net">google map code for website</a>
+		<style>
+			.gmap_canvas {
+				overflow: hidden;
+				background: none !important;
+				height: 500px;
+				width: 100%;
+			}
+		</style>
+</div>
 
 <section class="diagonal">
 	<div class="container halves aligned-top">
 		<div>
 			<h3>Indirizzo</h3>
-				<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
+			<address><a target="_blank"
+					href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a>
+			</address>
 		</div>
 		<div>
 			<h3>Email</h3>
-			<p><a href="mailto:{{ site.data.company.contact_email_address }}">{{ site.data.company.contact_email_address }}</a></p>
+			<p><a
+					href="mailto:{{ site.data.company.contact_email_address }}">{{ site.data.company.contact_email_address }}</a>
+			</p>
 		</div>
 	</div>
 </section>
-
-<script type="text/javascript">
-	window.mapData = {{ page.map | jsonify }};
-
-	function initMap() {
-		var myOptions = {
-			scrollwheel: false,
-			draggable: false,
-			panControl: false,
-			disableDefaultUI: true,
-			styles: [{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}],
-			zoom: window.mapData.zoom,
-			maxZoom: window.mapData.zoom,
-			minZoom: window.mapData.zoom,
-			center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		};
-		map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-		marker = new google.maps.Marker({
-			map: map,
-			position: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude)
-		});
-
-		google.maps.event.addDomListener(window, "resize", function () {
-			map.setCenter(myOptions.center);
-		});
-	}
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ site.env.MAPS_API_KEY }}&amp;callback=initMap"></script>

@@ -1,0 +1,7 @@
+[build]
+    command = "bundle exec jekyll build"
+[context.production]
+    command = "JEKYLL_ENV=production bundle exec jekyll build"
+[[redirects]]
+    from = "/*"
+    to = "/404"
