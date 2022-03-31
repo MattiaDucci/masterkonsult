@@ -8,3 +8,4 @@ WORKDIR /srv/jekyll
 
 # Install gems with bundle
 RUN bundle install
+
