@@ -29,9 +29,6 @@ exclude:
   - Dockerfile
   - "docker-compose.yml"
 
-# include:
-#   - _redirects
-
 defaults:
   - scope:
       path: ""
