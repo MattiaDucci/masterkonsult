@@ -4,7 +4,7 @@
     command = "JEKYLL_ENV=production bundle exec jekyll build"
 [context.develop]
     command = "JEKYLL_ENV=test bundle exec jekyll build"
-    [[context.develop.environment]]
+    [context.develop.environment]
         GA_ID = "G-2SKTNSFLC8"
         GTAG_ID = "GTM-WPZRS4V"
 [[redirects]]
