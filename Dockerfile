@@ -1,7 +1,7 @@
 FROM jekyll/jekyll
 # Copy only Gemfile and Gemfile.lock to application folder
-COPY Gemfile* /srv/jekyll/
-COPY *.gemspec /srv/jekyll/
+COPY --chown=jekyll:jekyll Gemfile* /srv/jekyll/
+COPY --chown=jekyll:jekyll *.gemspec /srv/jekyll/
 
 # Set current directory
 WORKDIR /srv/jekyll
