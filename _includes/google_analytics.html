@@ -1,5 +1,9 @@
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.env.GA_ID }}"></script>
-<script>
+<script type="text/plain" data-cookiecategory="analytics" async src="https://www.googletagmanager.com/gtag/js?id={{ site.env.GA_ID }}"></script>
+<script type="text/plain" data-cookiecategory="analytics">
+    console.log('"ads" category accepted');
+</script>
+<script type="text/plain" data-cookiecategory="analytics">
+    console.log("pippo analytics");
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -10,7 +14,7 @@
     gtag('config', '{{ site.env.GA_ID }}');
 </script>
 <!-- Google Tag Manager -->
-<script>
+<script type="text/plain" data-cookiecategory="analytics">
     (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
