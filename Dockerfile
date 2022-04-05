@@ -9,3 +9,6 @@ WORKDIR /srv/jekyll
 # Install gems with bundle
 RUN bundle install
 
+#Netlify
+RUN npm config set unsafe-perm true
+RUN npm install -g netlify-cli
