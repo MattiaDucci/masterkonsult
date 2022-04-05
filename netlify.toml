@@ -5,7 +5,7 @@
 [context.develop]
     command = "JEKYLL_ENV=test bundle exec jekyll build"
     [context.develop.environment]
-        GA_ID = "G-2SKTNSFLC8"
+        GA_ID = "G-SG43PRRHPW"
         GTAG_ID = "GTM-WPZRS4V"
 [[redirects]]
     from = "/*"

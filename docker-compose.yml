@@ -8,7 +8,4 @@ services:
     ports:
       - '8083:4000'
       - '4004:4001'
-    environment:
-      - GA_ID="G-2SKTNSFLC8" #test
-      - GTAG_ID="GTM-WPZRS4V" #test
     command: bundle exec jekyll s --force-polling -H 0.0.0.0 -P 4000 --livereload --livereload-port 4001
