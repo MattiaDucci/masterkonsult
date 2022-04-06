@@ -1,3 +1,5 @@
+[dev]
+    command = "bundle exec jekyll serve --force_polling --livereload"
 [build]
     command = "bundle exec jekyll build"
 [context.production]

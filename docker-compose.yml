@@ -9,4 +9,5 @@ services:
       - .env
     ports:
       - '8888:8888'
+      - '35729:35729'
     command: netlify dev
