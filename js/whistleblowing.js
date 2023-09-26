@@ -1,15 +1,12 @@
 //"http://localhost:9999/.netlify/functions/coupon" per test con server locale
 function applyCoupon() {
   const couponValue = document.getElementById("coupon-input").value;
-  const couponApplicationResponse = fetch(
-    "{{ site.baseurl }}/.netlify/functions/coupon",
-    {
-      body: JSON.stringify({
-        coupon: couponValue,
-      }),
-      method: "POST",
-    }
-  )
+  const couponApplicationResponse = fetch("/.netlify/functions/coupon", {
+    body: JSON.stringify({
+      coupon: couponValue,
+    }),
+    method: "POST",
+  })
     .then((res) => res.json())
     .then((json) => {
       const discountedPrices = json.discountedPrice;
