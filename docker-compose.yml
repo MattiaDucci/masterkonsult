@@ -1,4 +1,4 @@
-version: '2.4'
+version: "2.4"
 
 services:
   jekyll:
@@ -8,5 +8,6 @@ services:
     env_file:
       - .env
     ports:
-      - '8888:8888'
+      - "8888:8888"
+      - "9999:9999"
     command: netlify dev

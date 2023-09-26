@@ -5,7 +5,7 @@ subtitle: "Verifichiamo la compliance con il Regolamento UE GDPR della tua organ
 link: privacy
 image_path: privacy.png
 image_alt: "persona seduta al computer circondata da fogli di carta e con a fianco un simbolo di uno scudo con un lucchetto"
-order: 3
+order: 4
 ---
 
 ## Scrivere qualcosa in Markdown

@@ -1,6 +1,6 @@
 title: Master Konsult
 url: "https://www.masterkonsult.com/"
-baseurl: 
+baseurl: ""
 locale: it_IT
 
 # Default description in social shares for the jekyll-seo-tag gem
@@ -13,7 +13,7 @@ collections:
   staff_members:
     output: false
   servizi:
-    output: false
+    output: true
     sort_by: order
   customers:
     output: false
@@ -48,6 +48,11 @@ defaults:
         image_path:
           width: 600
           height: 600
+  - scope:
+      path: ""
+      type: "servizi"
+    values:
+      layout: "service"
   - scope:
       path: ""
       type: "pages"
