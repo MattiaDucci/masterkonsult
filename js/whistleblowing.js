@@ -1,4 +1,5 @@
 //"http://localhost:9999/.netlify/functions/coupon" per test con server locale
+// /.netlify/functions/coupon IN PRODUZIONE
 function applyCoupon() {
   const couponValue = document.getElementById("coupon-input").value;
   const couponApplicationResponse = fetch("/.netlify/functions/coupon", {
@@ -32,6 +33,7 @@ function applyCoupon() {
         priceSpan.style.textDecoration = "line-through";
         priceRow.parentNode.insertBefore(clonedRow, priceRow.nextSibling);
         document.getElementById("apply-coupon-btn").disabled = true;
+        document.getElementById("coupon-hidden-field").value = couponValue;
       });
     })
     .catch((err) => {

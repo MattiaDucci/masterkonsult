@@ -2,14 +2,14 @@
 identifier: whistleblowing
 title: Whistleblowing
 subtitle: "La scadenza si avvicina! Mettiti in regola entro il 17 dicembre 2023.<br>Sono in vigore le nuove norme Whistleblowing.<br>Attiva subito il servizio al costo di 800€ in promozione fino al 30/11"
-image_path: whistleblowing.svg
+image_path: whistleblowing.png
 image_alt: "Persona che trasporta un messaggio"
 has_details: true
 order: 0
 ---
 ## Whistleblowing obbligatorio per tutte le aziende
 
-In attuazione alla [Direttiva UE 2019/1937](https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32019L1937&from=RO), il 10 marzo 2023 è stato approvato e pubblicato in Gazzetta Ufficiale il 25 marzo 2023 il [d.lgs n24/2023](https://www.gazzettaufficiale.it/showNewsDetail?id=5978&backTo=archivio&anno=2023&provenienza=archivio) riguardante "la protezione delle persone che segnalano violazioni del diritto dell'Unione e recante disposizioni riguardanti la protezione delle persone che segnalano violazioni delle disposizioni normative nazionali"
+In attuazione alla [Direttiva UE 2019/1937](https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=CELEX:32019L1937&from=RO), il 10 marzo 2023 è stato approvato e pubblicato in Gazzetta Ufficiale il 15 marzo 2023 il [d.lgs n24/2023](https://www.gazzettaufficiale.it/showNewsDetail?id=5978&backTo=archivio&anno=2023&provenienza=archivio) riguardante "la protezione delle persone che segnalano violazioni del diritto dell'Unione e recante disposizioni riguardanti la protezione delle persone che segnalano violazioni delle disposizioni normative nazionali".
 
 In base a quanto previsto dall'[art 54 bis del d.lgs. n. 165/2001 così come modificato dalla legge 30 novembre 2017, n. 179](https://www.gazzettaufficiale.it/eli/id/2017/12/14/17G00193/sg.), tutti gli enti pubblici e le società hanno l'obbligo di implementare un processo di ricezione e gestione delle segnalazioni di comportamenti scorretti e violazione di leggi e regolamenti.
 
@@ -25,7 +25,7 @@ Queste ultime saranno tenute ad istituire i canali di segnalazione interni, anch
 La normativa impone alle imprese di adeguarsi alla direttiva europea, come recepita dalla normativa italiana, entro e non oltre il:
 
 - 15/07/2023 per le aziende con più di 249 dipendenti
-- 17/12/2023 per le aziende con almeno 50 dipendenti
+- 17/12/2023 per le aziende con almeno 50 dipendenti o che rientrano nell’ambito dell’applicazione del D.lgs. 231/2001
 
 ## Che sanzione si rischia
 
@@ -169,26 +169,28 @@ E' possibile fruire del servizio in abbonamento per la durata di 3 anni al prezz
 			<div class="halves">
 				<label for="num-dip-input">Numero di dipendenti</label>
                 <input type="number" name="numero-dipendenti" id="num-dip-input">
-                <fieldset>
-                    <legend>A che pacchetto sei interessato?</legend>
-                    
-                    <label>
+                <label for="packets">A che pacchetto sei interessato?</label>
+                <div id="packets">
+                    <div style="display: flex; align-items: center; flex-direction: column;">
+                    <label style="margin-top: 0px;">
                         <div class="d-flex align-items-center">
                             <input type="radio" name="pacchetto-di-interesse" value="Core" style="width: 32px;">Core
                         </div>
                     </label>
-                    <label>
+                    <label style="margin-top: 0px;">
                         <div class="d-flex align-items-center">
                             <input type="radio" name="pacchetto-di-interesse" value="Premium" style="width: 32px;">Premium
                         </div>
                     </label>
-                    <label>
+                    <label style="margin-top: 0px;">
                         <div class="d-flex align-items-center">
                             <input type="radio" name="pacchetto-di-interesse" value="Platinum" style="width: 32px;">Platinum
                         </div>
                     </label>
+                    </div>
+                    <input id="coupon-hidden-field" type="hidden" name="coupon" value="">
                     
-                </fieldset>
+                </div>
 			</div>
 
 			<label for="message">Messaggio</label>
