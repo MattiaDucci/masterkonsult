@@ -10,7 +10,15 @@
             </div>
             <div class="editable text-align-sm-center">
                 {% if include.service_id %}
-                <a href="{{ site.baseurl }}/contatti/?area={{ include.service_id }}">Chiedi ulteriori informazioni &rarr;</a>    
+                    {% if include.service.has_details %}
+                        {% if include.service.has_details == false %}
+                            <a href="{{ site.baseurl }}/contatti/?area={{ include.service_id }}">Chiedi ulteriori informazioni &rarr;</a>                        
+                        {% endif %}
+                    {% else %}
+                    <a href="{{ site.baseurl }}/contatti/?area={{ include.service_id }}">Chiedi ulteriori informazioni &rarr;</a>                        
+                    
+                    {% endif %}
+                
             {% endif %}
             </div>
         </div>
