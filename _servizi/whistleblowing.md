@@ -95,7 +95,7 @@ Secondo il decreto, le aziende inadempienti possono essere sanzionate fino a **5
 
     <h2>Ti può interessare? Contattaci</h2>
 
-    <form name="whistleblowing" action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form"
+    <form name="whistleblowing" id="whistleblowing-form" action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form"
 			data-netlify="true">
 
             <div class="halves">
@@ -123,7 +123,7 @@ Secondo il decreto, le aziende inadempienti possono essere sanzionate fino a **5
 			</div>
 			<div class="halves">
 				<label for="num-dip-input">Numero di dipendenti</label>
-                <select name="numero-dipendenti" id="num-dip-input" form="whistleblowing">
+                <select name="numero-dipendenti" id="num-dip-input" form="whistleblowing-form">
                     <option value="< 50">MInore di 50</option>
                     <option value="50 < x <= 100">Tra 50 e 100</option>
                     <option value="100 < x <= 250">Tra 100 e 250</option>
