@@ -3,14 +3,24 @@
         <div>
             <h3 class="editable text-align-sm-center">{{ include.title }}</h3>
             <p class="editable text-align-sm-center">{{ include.excerpt }}</p>
-            <p class="editable text-align-sm-center">
-            {% if include.link %}
-                <a href="{{ site.baseurl }}/servizi/{{ include.link }}">Scopri di più &rarr;</a>    
+            <div class="editable text-align-sm-center mb-2">
+                {% if include.service.has_details %}
+                    <a href="{{ include.service.url }}">Scopri di più &rarr;</a>
+                {% endif %}
+            </div>
+            <div class="editable text-align-sm-center">
+                {% if include.service_id %}
+                    {% if include.service.has_details %}
+                        {% if include.service.has_details == false %}
+                            <a href="{{ site.baseurl }}/contatti/?area={{ include.service_id }}">Chiedi ulteriori informazioni &rarr;</a>                        
+                        {% endif %}
+                    {% else %}
+                    <a href="{{ site.baseurl }}/contatti/?area={{ include.service_id }}">Chiedi ulteriori informazioni &rarr;</a>                        
+                    
+                    {% endif %}
+                
             {% endif %}
-            {% if include.service_id %}
-                <a href="{{ site.baseurl }}/contatti/?area={{ include.service_id }}">Chiedi ulteriori informazioni &rarr;</a>    
-            {% endif %}
-            </p>
+            </div>
         </div>
         <div class="image-container-center">
             <img src="{{ site.baseurl }}/images/servizi/{{ include.image }}" alt="{{ include.image_alt }}" width="400" style="margin-bottom: 40px;">
