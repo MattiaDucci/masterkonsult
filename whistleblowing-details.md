@@ -1,7 +1,7 @@
 ---
 title: Dettagli whistleblowing
-heading: Dettagli whistleblowing
-subtitle: ""
+heading: Whistleblowing - Approfondimenti
+subtitle: "Sono in vigore le nuove norme Whistleblowing"
 layout: service
 ---
 In base a quanto previsto dall'[art 54 bis del d.lgs. n. 165/2001 così come modificato dalla legge 30 novembre 2017, n. 179](https://www.gazzettaufficiale.it/eli/id/2017/12/14/17G00193/sg.), tutti gli enti pubblici e le società hanno l'obbligo di implementare un processo di ricezione e gestione delle segnalazioni di comportamenti scorretti e violazione di leggi e regolamenti.
